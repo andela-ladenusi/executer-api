@@ -39,11 +39,11 @@ npm install
 
 # Create .env file and set the following environment variables and add the necessary values
 DB_URL=mongodb://localhost/executer
-GOOGLE\_CAL\_CLIENT\_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-CALENDAR\_CLIENT\_SECRET=xxxxxxxxxxxxxxxx
-UBER\_CLIENT\_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-UBER\_SECRET\_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-UBER\_SERVER\_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+`GOOGLE_CAL_CLIENT_ID`=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+`CALENDAR_CLIENT_SECRET`=xxxxxxxxxxxxxxxx
+`UBER_CLIENT_ID`=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+`UBER_SECRET_KEY`=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+`UBER_SERVER_TOKEN`=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Run the app
 gulp default
