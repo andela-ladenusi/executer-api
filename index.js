@@ -2,18 +2,24 @@ global.t = require('moment');
 global._ = require('lodash');
 
 var cookieParser = require('cookie-parser'),
-    morgan = require('morgan'),
-    mongoose = require('mongoose'),
-    env = process.env.NODE_ENV || 'development',
-    config = require('./config/config')[env],
-    router = require('./lib/routes'),
     express = require('express'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
+    morgan = require('morgan'),
+    mongoose = require('mongoose'),
+    dotenv = require('node-env-file'),
+    env = process.env.NODE_ENV || 'development',
+    router = require('./lib/routes'),
     app = express();
 
-console.log('\nConnecting to MongoDB at ' + config.db.url + ' ...');
-mongoose.connect(config.db.url);
+if (env === 'development') {
+    dotenv(__dirname + '/.env');
+}
+
+console.log('Starting server in ' + env + ' mode...');
+
+console.log('\nConnecting to MongoDB at ' + process.env.DB_URL + ' ...');
+mongoose.connect(process.env.DB_URL);
 
 mongoose.connection.on('open', function () {
     console.log('\nConnected to MongoDB...');
@@ -29,11 +35,6 @@ app.dir = process.cwd();
 
 // things to do on each request
 router.use(function (req, res, next) {
-    // log each request in development environment
-    if (env !== 'production') {
-        // console.log(t().format('HH:MM'), req.method, req.url, req.socket.bytesRead);
-    }
-
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', '*');
 
