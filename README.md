@@ -40,7 +40,7 @@ npm install
 # Create .env file and set the following environment variables and add the necessary values
 DB_URL=mongodb://localhost/executer
 GOOGLE_CAL_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-CALENDAR_CLIENT_SECRET=xxxxxxxxxxxxxxxx
+GOOGLE_CAL_CLIENT_SECRET=xxxxxxxxxxxxxxxx
 UBER_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 UBER_SECRET_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 UBER_SERVER_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
